@@ -7,5 +7,9 @@ O projeto tem como função principal praticar sobre os conceitos de paradigma d
 É um simples programa de adição e remoção de pacientes de um pontuário. 
 
 
+### Observação
+Ainda sou iniciante, e acredito que praticar seja o melhor caminho para reforçar todos os conteúdos. Ao longo do aprendizado pretendo aprimorar o projeto.
+
+
 ### Tecnologia utilizada
 ![Java](https://img.shields.io/badge/Java-000?style=for-the-badge&logo=java&logoColor=white)

@@ -19,4 +19,24 @@ public class Consulta {
 
     }
 
+    public Consulta(Paciente paciente, Medico medico, LocalDate data, String observacoes) {
+        this.paciente = paciente;
+        this.medico = medico;
+        this.data = data;
+        this.observacoes = observacoes;
+    }
+
+    @Override
+    public String toString(){
+
+        return "Ficha de consulta\n " +
+                "Paciente: " + paciente.getNome() + "\n" +
+                "CPF: " + paciente.getCpf() + "\n" +
+                "Médico: " + medico.getNome() + "\n" +
+                "Especialidade: " + medico.getEspecialidade() + "\n" +
+                "Data: " + data + "\n" +
+                "Observações: " + observacoes;
+
+
+    }
 }

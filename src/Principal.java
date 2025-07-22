@@ -18,13 +18,9 @@ public class Principal {
                 Escolha uma das opções abaixo:
                 
                 1 - Cadastrar paciente
-                2 - Cadastrar médico
-                3 - Agendar consultas
-                4 - Cancelar consulta
-                5 - Listar Pacientes
-                6 - Apagar paciente por indice
-                7 - Sair
-                
+                2 - Listar Pacientes
+                3 -  Apagar pacientes cadastrados por INDICE
+                4 - Sair
                 """;
 
 

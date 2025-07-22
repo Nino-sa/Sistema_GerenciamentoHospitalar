@@ -106,6 +106,25 @@ public class Sistema {
         } else {
             System.out.println("Índice inválido. ");
         }
+    }
+
+
+    public void cadastrarConsulta (){
+
+        System.out.println("Nome do paciente ");
+        String nomePaciente = sc.nextLine();
+
+        System.out.println("CPF do paciente: ");
+        String cpf =  sc.nextLine();
+
+        System.out.println("Nome do médico: ");
+        String nomeMedico = sc.nextLine();
+
+        System.out.println("Especialidade: ");
+        String especialidade = sc.nextLine();
+
+        Consulta novaConsulta = new Consulta();
+        listaConsultas.add(novaConsulta);
 
 
     }

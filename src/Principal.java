@@ -52,12 +52,8 @@ public class Principal {
 
                     break;
 
-                case 4:
-                    System.out.println("Cancelar consultas: ");
-                    break;
-
-                case 5:
-                    System.out.println("Listar consultas: ");
+                case 3:
+                    System.out.println("Listar Pacientes: ");
                     sistema.listarPacientes();
 
                     break;

@@ -17,6 +17,7 @@ public class Paciente extends Pessoa {
         this.idDeConsulta = id;
     }
 
+    @Override
     public String toString() {
         return  " Nome: " + getNome() +
                 " Idade: " + getIdade() +

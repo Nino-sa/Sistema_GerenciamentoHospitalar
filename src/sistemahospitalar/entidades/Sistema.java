@@ -1,6 +1,7 @@
 package sistemahospitalar.entidades;
 
 
+import sistemahospitalar.consulta.Consulta;
 import sistemahospitalar.validacao.Validar;
 
 import java.util.ArrayList;
@@ -9,26 +10,39 @@ import java.util.Scanner;
 public class Sistema {
 
     Scanner sc = new Scanner(System.in);
-    ArrayList<Paciente> listaPacientes = new ArrayList<>();
-    ArrayList<Medico> listaMedicos = new ArrayList<>();
-
+    ArrayList<Consulta> listaConsultas = new ArrayList<>();
 
     //Metodo que retorna perguntas para cadastro de paciente.
-    public void cadastrarPaciente() {
 
-        System.out.println("Digite seu email: ");
-        String email = sc.nextLine();
-        System.out.println("Digite seu nome: ");
-        String nome = sc.nextLine();
-        System.out.println("Digite seu CPF: ");
+    public void criarConsulta() {
+
+
+        System.out.println("Nome do paciente ");
+        String nomePaciente = sc.nextLine();
+
+        System.out.println("CPF do paciente: ");
         String cpf = sc.nextLine();
-        System.out.println("Digite seu número de celular: ");
+
+        System.out.println("Celular do paciente: ");
         String celular = sc.nextLine();
+
+        System.out.println("Nome do médico: ");
+        String nomeMedico = sc.nextLine();
+
+        System.out.println("Especialidade: ");
+        String especialidade = sc.nextLine();
+
         System.out.println("Digite seu SEXO: Masculino - Feminino - Outro");
         char sexo = sc.nextLine().charAt(0);
+
         System.out.println("Informe sua idade: ");
         int idade = sc.nextInt();
+
         sc.nextLine();
+
+        Consulta novasConsultas = new Consulta();
+        listaConsultas.add(novasConsultas);
+
 
 
         try {// try - tentar
@@ -36,10 +50,6 @@ public class Sistema {
 
             if (!Validar.validaIdade(idade)) {
                 throw new IllegalArgumentException("Idade ");
-            }
-
-            if (!Validar.validarEmail(email)) {
-                throw new IllegalArgumentException("Email  ");
             }
 
             if (!Validar.validarCpf(cpf)) {
@@ -61,71 +71,49 @@ public class Sistema {
         System.out.println("Cadastro concluído com sucesso. ");
 
 
-        Paciente pacientes = new Paciente(email, nome, cpf, celular, sexo, idade);
-        listaPacientes.add(pacientes);
-
     }
 
 
-    public void listarPacientes() {
-        System.out.println("\nLista de pacientes cadastrados: ");
+    public void listarConsulta() {
+        System.out.println("\nLista de consultas criadas: ");
+        System.out.println();
 
-        if (listaPacientes.isEmpty()) { //Verifica se a lista criada não está vazia
+        if (listaConsultas.isEmpty()) { //Verifica se a lista criada não está vazia
             System.out.println("Nenhum paciente cadastrado");
             return;
 
         } else {
-            for (Paciente p : listaPacientes) {
-                System.out.println(p);
+            for (Consulta c : listaConsultas) {
+                System.out.println(c);
 
             }
         }
 
     }
 
-    public void apagarPacientes() {
+    public void apagarConsulta() {
 
-        if (listaPacientes.isEmpty()) {
+        if (listaConsultas.isEmpty()) {
             System.out.println("Nenhum paciente cadastrado");
             return;
 
         }
 
-        System.out.println("Pacientes cadastrados: ");
-        for (int indice = 0; indice < listaPacientes.size(); indice++) {
-            System.out.println("Indice [" + indice + "] " + listaPacientes.get(indice).getNome());
+        System.out.println("Consulta cadastrados: ");
+        for (int indice = 0; indice < listaConsultas.size(); indice++) {
+            System.out.println("Indice [" + indice + "] " + listaConsultas.get(indice));
 
         }
 
-        System.out.println("\nDigite o indice para apagar um elemento específico: ");
+        System.out.println("\nDigite o indice para apagar a consulta em específico: ");
         int indice = sc.nextInt();
 
-        if (indice >= 0 && indice < listaPacientes.size()) {
-            Paciente removido = listaPacientes.remove(indice);
-            System.out.println("Paciente removido: " + removido.getNome());
+        if (indice >= 0 && indice < listaConsultas.size()) {
+            Consulta removido = listaConsultas.remove(indice);
+            System.out.println("Consulta excluída: " + removido);
+
         } else {
             System.out.println("Índice inválido. ");
         }
-    }
-
-
-    public void cadastrarConsulta (){
-
-        System.out.println("Nome do paciente ");
-        String nomePaciente = sc.nextLine();
-
-        System.out.println("CPF do paciente: ");
-        String cpf =  sc.nextLine();
-
-        System.out.println("Nome do médico: ");
-        String nomeMedico = sc.nextLine();
-
-        System.out.println("Especialidade: ");
-        String especialidade = sc.nextLine();
-
-        Consulta novaConsulta = new Consulta();
-        listaConsultas.add(novaConsulta);
-
-
     }
 }

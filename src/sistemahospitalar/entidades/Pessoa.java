@@ -1,10 +1,7 @@
 package sistemahospitalar.entidades;
-import java.time.LocalDate;
 
 public class Pessoa {
 
-
-    private String email;
     private String nome;
     private String cpf;
     private String celular;
@@ -12,8 +9,7 @@ public class Pessoa {
     private int idade;
 
 
-    public Pessoa(String email, String nome, String cpf, String celular, char sexo, int idade) {
-        this.email = email;
+    public Pessoa( String nome, String cpf, String celular, char sexo, int idade) {
         this.nome = nome;
         this.cpf = cpf;
         this.celular = celular;
@@ -45,13 +41,6 @@ public class Pessoa {
         this.celular = celular;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public char getSexo() {
         return sexo;

@@ -17,10 +17,12 @@ public class Principal {
                 
                 Escolha uma das opções abaixo:
                 
-                1 - Cadastrar paciente
-                2 - Listar Pacientes
-                3 -  Apagar pacientes cadastrados por INDICE
+                1 - Agendar consulta
+                2 - Listar consulta
+                3 - Apagar consulta
                 4 - Sair
+                
+                
                 """;
 
 
@@ -33,33 +35,21 @@ public class Principal {
             switch (opcao) {
 
                 case 1:
-                    System.out.println("Cadastrar paciente:");
-                    sistema.cadastrarPaciente();
+                    System.out.println("Agendar consulta:");
+                    sistema.criarConsulta();
                     break;
 
                 case 2:
-                    System.out.println("Cadastrar médico: ");
-
-
+                    System.out.println("Listar consultas: ");
+                    sistema.listarConsulta();
                     break;
 
                 case 3:
-                    System.out.println("Agendar consultas: ");
-
+                    System.out.println("Apagar consulta cadastrada: ");
+                    sistema.apagarConsulta();
                     break;
 
-                case 3:
-                    System.out.println("Listar Pacientes: ");
-                    sistema.listarPacientes();
-
-                    break;
-
-                case 6:
-                    System.out.println("Apagar todos os pacientes cadastrados: ");
-                    sistema.apagarPacientes();
-                    break;
-
-                case 7:
+                case 4:
                     System.out.println("Saindo... Obrigado por usar o sistema!");
                     break;
 
@@ -68,7 +58,7 @@ public class Principal {
                     break;
 
             }
-        } while (opcao != 7);
+        } while (opcao != 4);
         sc.close();
 
     }

@@ -4,8 +4,8 @@ public class Paciente extends Pessoa {
 
     private int idDeConsulta;
 
-    public Paciente(String email, String nome, String cpf, String celular, char sexo, int idade) {
-        super(email, nome, cpf, celular, sexo, idade);
+    public Paciente( String nome, String cpf, String celular, char sexo, int idade) {
+        super(nome, cpf, celular, sexo, idade);
     }
 
 
@@ -19,12 +19,7 @@ public class Paciente extends Pessoa {
 
     @Override
     public String toString() {
-        return  " Nome: " + getNome() +
-                " Idade: " + getIdade() +
-                " Email: " + getEmail() +
-                " Celular: " + getCelular() +
-                " CPF: " + getCpf() +
-                " Sexo: " + getSexo();
+        return STR." Nome: \{getNome()} Idade: \{getIdade()} Celular: \{getCelular()} CPF: \{getCpf()} Sexo: \{getSexo()}";
 
     }
 

@@ -2,17 +2,24 @@ package sistemahospitalar.consulta;
 
 import sistemahospitalar.entidades.Medico;
 import sistemahospitalar.entidades.Paciente;
+
 import java.time.LocalDate;
 
 
 public class Consulta {
-     Paciente paciente;
-     Medico medico;
-     LocalDate data;
+    private Paciente paciente;
+    private Medico medico;
+    private LocalDate data;
+    private String observacoes;
+
+
+    public Consulta() {
+
+    }
 
 
     //Construtor que válida o estado da classe.
-    public  Consulta (Paciente paciente, Medico medico, LocalDate data){
+    public Consulta(Paciente paciente, Medico medico, LocalDate data) {
         this.paciente = paciente;
         this.medico = medico;
         this.data = data;
@@ -26,17 +33,18 @@ public class Consulta {
         this.observacoes = observacoes;
     }
 
+
     @Override
-    public String toString(){
+    public String toString() {
 
-        return "Ficha de consulta\n " +
-                "Paciente: " + paciente.getNome() + "\n" +
-                "CPF: " + paciente.getCpf() + "\n" +
-                "Médico: " + medico.getNome() + "\n" +
-                "Especialidade: " + medico.getEspecialidade() + "\n" +
-                "Data: " + data + "\n" +
-                "Observações: " + observacoes;
-
+        return STR."""
+Ficha de consulta
+ Paciente: \{paciente.getNome()}
+CPF: \{paciente.getCpf()}
+Médico: \{medico.getNome()}
+Especialidade: \{medico.getEspecialidade()}
+Data: \{data}
+Observações: \{observacoes}""";
 
     }
 }

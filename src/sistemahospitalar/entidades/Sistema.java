@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Sistema {
 
     Scanner sc = new Scanner(System.in);
+    ArrayList<Paciente> listaPacientes = new ArrayList<>();
     ArrayList<Consulta> listaConsultas = new ArrayList<>();
 
     //Metodo que retorna perguntas para cadastro de paciente.
@@ -37,12 +38,7 @@ public class Sistema {
 
         System.out.println("Informe sua idade: ");
         int idade = sc.nextInt();
-
         sc.nextLine();
-
-        Consulta novasConsultas = new Consulta();
-        listaConsultas.add(novasConsultas);
-
 
 
         try {// try - tentar
@@ -70,21 +66,23 @@ public class Sistema {
         }
         System.out.println("Cadastro concluído com sucesso. ");
 
+       Paciente pacientes = new Paciente(nomePaciente, cpf,  celular, sexo,idade);
+       listaPacientes.add(pacientes);
+
 
     }
 
 
     public void listarConsulta() {
         System.out.println("\nLista de consultas criadas: ");
-        System.out.println();
 
-        if (listaConsultas.isEmpty()) { //Verifica se a lista criada não está vazia
-            System.out.println("Nenhum paciente cadastrado");
+        if (listaPacientes.isEmpty()) { //Verifica se a lista criada não está vazia
+            System.out.println("Nenhuma consulta criada");
             return;
 
         } else {
-            for (Consulta c : listaConsultas) {
-                System.out.println(c);
+            for (Paciente p : listaPacientes) {
+                System.out.println(p);
 
             }
         }
@@ -93,24 +91,23 @@ public class Sistema {
 
     public void apagarConsulta() {
 
-        if (listaConsultas.isEmpty()) {
-            System.out.println("Nenhum paciente cadastrado");
+        if (listaPacientes.isEmpty()) {
+            System.out.println("Nenhuma consulta cadastrada");
             return;
 
         }
 
-        System.out.println("Consulta cadastrados: ");
-        for (int indice = 0; indice < listaConsultas.size(); indice++) {
-            System.out.println("Indice [" + indice + "] " + listaConsultas.get(indice));
+        for (int indice = 0; indice < listaPacientes.size(); indice++) {
+            System.out.println("Indice [" + indice + "] " + listaPacientes.get(indice).getNome());
 
         }
 
         System.out.println("\nDigite o indice para apagar a consulta em específico: ");
         int indice = sc.nextInt();
 
-        if (indice >= 0 && indice < listaConsultas.size()) {
-            Consulta removido = listaConsultas.remove(indice);
-            System.out.println("Consulta excluída: " + removido);
+        if (indice >= 0 && indice < listaPacientes.size()) {
+            Paciente removido = listaPacientes.remove(indice);
+            System.out.println("Consulta excluída: " + removido.getNome());
 
         } else {
             System.out.println("Índice inválido. ");

@@ -42,7 +42,7 @@ public class Principal {
                 case 2:
                     System.out.println("Listar consultas: ");
                     sistema.listarConsulta();
-                    break;
+                break;
 
                 case 3:
                     System.out.println("Apagar consulta cadastrada: ");

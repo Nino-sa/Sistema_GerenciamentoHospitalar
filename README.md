@@ -1,15 +1,33 @@
-## Sistema de Gerenciamento Hospitalar
+# 🏥 Sistema de Gerenciamento Hospitalar
 
+## 📌 Sobre o Projeto
 
-## Sobre o projeto
-O projeto tem como função principal praticar sobre os conceitos de paradigma de Orientação a Objetos, lidando com herança, exceções, classes e objetos. 
+Este projeto tem como principal objetivo a **prática dos conceitos de Programação Orientada a Objetos (POO)**, aplicando fundamentos como **herança, tratamento de exceções, criação de classes e instâncias de objetos**.
 
-É um simples programa de adição, listagem e remoção de pacientes de um pontuário. 
+Trata-se de um sistema simples e funcional, voltado para o gerenciamento de pacientes em um prontuário, permitindo realizar operações básicas como:
 
+- ➕ Adicionar pacientes  
+- 📋 Listar pacientes  
+- ❌ Remover pacientes  
 
-### Observação
-Ainda sou iniciante, e acredito que praticar seja o melhor caminho para reforçar todos os conteúdos. Ao longo do aprendizado pretendo aprimorar o projeto.
+## 👨‍💻 Objetivo Pessoal
 
+Como ainda estou em fase de aprendizado, vejo este projeto como uma excelente oportunidade para **consolidar o conhecimento adquirido** na área de desenvolvimento em Java.  
+Acredito que a prática constante é fundamental para o domínio da programação, por isso, **pretendo continuar aprimorando e expandindo este sistema**, com novas funcionalidades e melhorias técnicas ao longo do tempo.
 
-### Tecnologia utilizada
-![Java](https://img.shields.io/badge/Java-000?style=for-the-badge&logo=java&logoColor=white)
+## 🛠️ Tecnologias Utilizadas
+
+- **Java** – Linguagem principal usada no desenvolvimento do sistema  
+- **Paradigma de Programação Orientada a Objetos (POO)**  
+- **Console (linha de comando)** – Interface utilizada para interação com o usuário
+
+## 🚧 Funcionalidades Futuras (em desenvolvimento)
+
+- 📅 Agendamento de consultas  
+- 🩺 Cadastro de médicos  
+- 📈 Relatórios básicos  
+- 💾 Persistência de dados com arquivos ou banco de dados  
+
+---
+
+> Projeto desenvolvido para fins educacionais, com foco na prática e evolução contínua.

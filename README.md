@@ -4,7 +4,7 @@
 ## Sobre o projeto
 O projeto tem como função principal praticar sobre os conceitos de paradigma de Orientação a Objetos, lidando com herança, exceções, classes e objetos. 
 
-É um simples programa de adição e remoção de pacientes de um pontuário. 
+É um simples programa de adição, listagem e remoção de pacientes de um pontuário. 
 
 
 ### Observação
